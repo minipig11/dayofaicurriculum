@@ -1,5 +1,9 @@
 <template>
-  <div class="course-card" :data-type="type">
+  <div 
+    class="course-card" 
+    :class="{ 'gray-text': isGrayText }" 
+    :data-type="type"
+  >
     <div class="card-header" @click="toggleDrawer">
       <h3>{{ title }}</h3>
       <div class="meta">
@@ -23,7 +27,12 @@ export default {
     type: { type: String, required: true },
     level: { type: String, required: true },
     ageRange: { type: String, required: true },
-    description: { type: String, required: true }
+    description: { type: String, required: true },
+    class: {
+      type: String,
+      default: ''
+    },
+    isGrayText: { type: Boolean, default: false }
   },
   data() {
     return {
@@ -47,6 +56,16 @@ export default {
   cursor: pointer;
   width: 100%;
   display: block;
+  color: inherit;
+}
+
+.gray-text,
+.gray-text h3,
+.gray-text .meta,
+.gray-text .description,
+.gray-text .sub-items,
+.gray-text .sub-item {
+  color: #b3b2b2 !important;
 }
 
 h3 {
@@ -99,5 +118,9 @@ h3 {
 
 .arrow.is-open {
   transform: rotate(180deg);
+}
+
+h3, .meta, .description, .sub-items, .sub-item {
+  color: inherit;
 }
 </style>

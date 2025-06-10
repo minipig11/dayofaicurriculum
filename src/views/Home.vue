@@ -13,6 +13,7 @@
             level="初级"
             ageRange="(5-7 岁)"
             description="2025 年更新！面向年轻学习者的一系列介绍活动"
+            :isGrayText="true"
           >
             <div class="sub-items">
               <div class="sub-item">1. 什么是AI？</div>
@@ -63,6 +64,7 @@
             level="初级"
             ageRange="(10-18 岁)"
             description="学办 AI 道德伦理选修课 AI 作为进阶的教材！（这些活动可以按任何顺序教授）"
+            :isGrayText="true"
           >
             <div class="sub-items">
               <div class="sub-item">1. AI 伦理辩论材料</div>
@@ -85,7 +87,7 @@
             description="*2025 年新版！"
           >
             <div class="sub-items">
-              <div class="sub-item">1. 人工智能和创意艺术 (5-11 岁)</div>
+              <div class="sub-item" style="color: #666;">1. 人工智能和创意艺术 (5-11 岁)</div>
               <div class="sub-item">2. 人工智能和创意活动 (12-18 岁)</div>
             </div>
           </CourseCard>
@@ -96,6 +98,7 @@
             level="中级"
             ageRange="(12 岁及以上)"
             description="*2025 年新版！"
+            :isGrayText="true"
           >
             <div class="sub-items">
               <div class="sub-item">1. 什么是聊天机器人, 他们是如何工作的</div>
@@ -141,6 +144,7 @@
             level="中级"
             ageRange="(8-18 岁)"
             description="一系列公民课程，探讨人工智能如何影响社会权利的影响"
+            :isGrayText="true"
           >
             <div class="sub-items">
               <div class="sub-item">1. 人权和特权</div>
@@ -159,6 +163,7 @@
             level="中级"
             ageRange="(10-18 岁)"
             description="关于在社交媒体中使用人工智能的新发现及其影响的一系列研究实践训"
+            :isGrayText="true"
           >
             <div class="sub-items">
               <div class="sub-item">1. 现行校规</div>
@@ -196,7 +201,7 @@
       <!-- 超越AI素养板块 -->
       <section class="ai-advanced">
         <h2>超越 AI 素养 - Python编程课程</h2>
-        <p class="section-desc">这些单元旨在让学生深入挖掘 AI 素养之外的内容，并且可能需要更长的时间投入，主要包括数据驱动主义、探索 AI 的创造力。构建每天机器人以及使用 Blocks 或 Python 进行 AI 编程。这些主题还给男子学生在编码应用程序中的选择性解决问题的能力。</p>
+        <p class="section-desc">使用Python编程教授人工智能的课程。</p>
         <div class="course-grid">
           <CourseCard 
             title="AI如何量化我们(带编程)" 
