@@ -134,6 +134,17 @@
   </div>
 </template>
 
+<script>
+import CourseCard from '../components/CourseCard.vue'
+
+export default {
+  name: 'Home',
+  components: {
+    CourseCard
+  }
+}
+</script>
+
 <style scoped>
 .home {
   padding-top: 60px;
@@ -167,16 +178,16 @@ h2 {
   gap: 2rem;
 }
 
+/* 添加课程卡片背景颜色样式 */
+:deep(.course-card[data-type="basic"]) {
+  background-color: #E3F2FD; /* 浅蓝色背景用于基础课程 */
+}
+
+:deep(.course-card[data-type="application"]) {
+  background-color: #E8F5E9; /* 浅绿色背景用于应用课程 */
+}
+
 :deep(.course-card[data-type="advanced"]) {
-  background: linear-gradient(135deg, #9C27B0 0%, #673AB7 100%);
-  color: white;
-}
-
-:deep(.course-card[data-type="advanced"] h3) {
-  color: white;
-}
-
-:deep(.course-card[data-type="advanced"] p) {
-  color: rgba(255, 255, 255, 0.9);
+  background-color: #FFF3E0; /* 浅橙色背景用于高级课程 */
 }
 </style>
