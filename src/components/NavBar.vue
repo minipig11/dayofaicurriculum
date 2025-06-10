@@ -13,12 +13,21 @@
           <div class="nav-item">
             <span>School Administrators <i class="fas fa-angle-down"></i></span>
           </div>
-          <router-link to="/international" class="nav-item">International</router-link>
-          <router-link to="/partners" class="nav-item">Partners</router-link>
+          <div class="nav-item">
+            <span>international <i class="fas fa-angle-down"></i></span>
+          </div>
+          <div class="nav-item">
+            <span>partners <i class="fas fa-angle-down"></i></span>
+          </div>
           <div class="nav-item">
             <span>About Us <i class="fas fa-angle-down"></i></span>
           </div>
-          <router-link to="/contact" class="nav-item">Contact Us</router-link>
+          <div class="nav-item">
+            <span>contact <i class="fas fa-angle-down"></i></span>
+          </div>
+          <!-- router-link to="/international" class="nav-item">International</router-link>
+          <router-link to="/partners" class="nav-item">Partners</router-link>
+          <router-link to="/contact" class="nav-item">Contact Us</router-link -->
         </div>
       </div>
 
