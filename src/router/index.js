@@ -7,21 +7,21 @@ const routes = [
     name: 'Home',
     component: Home
   },
-  {
-    path: '/international',
-    name: 'International',
-    component: () => import('../views/International.vue')
-  },
-  {
-    path: '/partners',
-    name: 'Partners',
-    component: () => import('../views/Partners.vue')
-  },
-  {
-    path: '/contact',
-    name: 'Contact',
-    component: () => import('../views/Contact.vue')
-  }
+  // {
+  //   path: '/international',
+  //   name: 'International',
+  //   component: () => import('../views/International.vue')
+  // },
+  // {
+  //   path: '/partners',
+  //   name: 'Partners',
+  //   component: () => import('../views/Partners.vue')
+  // },
+  // {
+  //   path: '/contact',
+  //   name: 'Contact',
+  //   component: () => import('../views/Contact.vue')
+  // }
 ]
 
 const router = createRouter({
