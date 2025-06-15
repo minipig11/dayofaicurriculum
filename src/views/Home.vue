@@ -30,7 +30,6 @@
               <div class="sub-item">1. 什么是AI？</div>
               <div class="sub-item">2. 机器如何学习（简介）</div>
               <div class="sub-item">3. 什么是算法</div>
-              <div class="sub-item">4. AI 的未来发展</div>
             </div>
           </CourseCard>
           <CourseCard 
