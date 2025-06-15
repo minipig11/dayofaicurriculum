@@ -149,7 +149,7 @@ onBeforeMount(()=>{
 let bizCourseChapters = ref([]);
 //课程播放
 const playCourse = ( params  )=>{
-    options.src = "/1.mov" 
+    options.src = "/3.mp4" 
 }
 
 //开始播放
