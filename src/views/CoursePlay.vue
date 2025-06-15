@@ -95,6 +95,9 @@
 	</div>
 </template>
 <script setup>
+import vue3VideoPlay from 'vue3-video-play'
+import '@/assets/styles/video-play.css'
+
 //视频播放插件
 const options = reactive({
   width: "100%", //播放器高度
@@ -129,6 +132,7 @@ const options = reactive({
 // import { playerPlay , recordHistory , getLastHistoryByChapterId } from '../utils/api/course'
 //element-plus
 // import { ArrowLeftBold , Document } from "@element-plus/icons-vue";
+
 //获取路由参数 
 import { useRoute } from 'vue-router'
 let route = useRoute();
