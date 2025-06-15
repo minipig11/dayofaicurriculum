@@ -1,22 +1,17 @@
 <template>
   <div class="home">
-    <NavBar />
     <main>
       <!-- AI基础板块 -->
       <section class="ai-basics">
         <h2>AI 素养基础</h2>
         <p class="section-desc">适合初级和中学生学习的基础 AI 系列课程，以简单且针对性强的项目为切入点，帮你零基础入门人工智能时代。</p>
         <div class="course-grid">
-          <CourseCard 
-            title="面向小学低年级的 AI" 
-            type="basic"
-            level="初级"
-            ageRange="(5-7 岁)"
-            description="2025 年更新！面向年轻学习者的一系列介绍活动"
-            :isGrayText="true"
-          >
+          <CourseCard title="面向小学低年级的 AI" type="basic" level="初级" ageRange="(5-7 岁)" description="2025 年更新！面向年轻学习者的一系列介绍活动">
             <div class="sub-items">
-              <div class="sub-item">1. 什么是AI？</div>
+              <div class="sub-item">
+                <span>1. 什么是AI？</span>
+                <button class="btn-learn" @click="startPlay('ai_basic_1')">开始学习</button>
+              </div>
             </div>
           </CourseCard>
           <CourseCard 
@@ -27,9 +22,18 @@
             description="新：低年级和高年级活动！介绍 AI 是什么及其工作原理"
           >
             <div class="sub-items">
-              <div class="sub-item">1. 什么是AI？</div>
-              <div class="sub-item">2. 机器如何学习（简介）</div>
-              <div class="sub-item">3. 什么是算法</div>
+              <div class="sub-item">
+                <span>1. 什么是AI？</span>
+                <button class="btn-learn" @click="startPlay('basic_what_is_ai_1')">开始学习</button>
+              </div>
+              <div class="sub-item">
+                <span>2. 机器如何学习（简介）</span>
+                <button class="btn-learn" @click="startPlay('basic_what_is_ai_2')">开始学习</button>
+              </div>
+              <div class="sub-item">
+                <span>3. 什么是算法</span>
+                <button class="btn-learn" @click="startPlay('basic_what_is_ai_3')">开始学习</button>
+              </div>
             </div>
           </CourseCard>
           <CourseCard 
@@ -40,8 +44,14 @@
             description="更新于 2024 年 12月！学生将发现生成式AI 如何创新内容，并掌究其技术及其道德影响"
           >
             <div class="sub-items">
-              <div class="sub-item">1. 可教机器</div>
-              <div class="sub-item">2. AI中的偏见</div>
+              <div class="sub-item">
+                <span>1. 可教机器</span>
+                <button class="btn-learn" @click="startPlay('basic_machine_learning_1')">开始学习</button>
+              </div>
+              <div class="sub-item">
+                <span>2. AI中的偏见</span>
+                <button class="btn-learn" @click="startPlay('basic_machine_learning_2')">开始学习</button>
+              </div>
             </div>
           </CourseCard>
           <CourseCard 
@@ -52,9 +62,18 @@
             description="更新于 2024 年 12月！学生将发现生成式AI 如何创新内容，并掌究其技术及其道德影响"
           >
             <div class="sub-items">
-              <div class="sub-item">1. 什么是生成式 AI？</div>
-              <div class="sub-item">2. 使用AI生成图像</div>
-              <div class="sub-item">3. 深度伪造</div>
+              <div class="sub-item">
+                <span>1. 什么是生成式 AI？</span>
+                <button class="btn-learn" @click="startPlay('basic_gen_ai_1')">开始学习</button>
+              </div>
+              <div class="sub-item">
+                <span>2. 使用AI生成图像</span>
+                <button class="btn-learn" @click="startPlay('basic_gen_ai_2')">开始学习</button>
+              </div>
+              <div class="sub-item">
+                <span>3. 深度伪造</span>
+                <button class="btn-learn" @click="startPlay('basic_gen_ai_3')">开始学习</button>
+              </div>
             </div>
           </CourseCard>
           <CourseCard 
@@ -66,8 +85,14 @@
             :isGrayText="true"
           >
             <div class="sub-items">
-              <div class="sub-item">1. AI 伦理辩论材料</div>
-              <div class="sub-item">2. 合乎道德的使用AI探索</div>
+              <div class="sub-item">
+                <span>1. AI 伦理辩论材料</span>
+                <button class="btn-learn" @click="startPlay('basic_ethics_1')">开始学习</button>
+              </div>
+              <div class="sub-item">
+                <span>2. 合乎道德的使用AI探索</span>
+                <button class="btn-learn" @click="startPlay('basic_ethics_2')">开始学习</button>
+              </div>
             </div>
           </CourseCard>
         </div>
@@ -86,8 +111,14 @@
             description="*2025 年新版！"
           >
             <div class="sub-items">
-              <div class="sub-item" style="color: #666;">1. 人工智能和创意艺术 (5-11 岁)</div>
-              <div class="sub-item">2. 人工智能和创意活动 (12-18 岁)</div>
+              <div class="sub-item" style="color: #666;">
+                <span>1. 人工智能和创意艺术 (5-11 岁)</span>
+                <button class="btn-learn" @click="startPlay('art_ai_1')">开始学习</button>
+              </div>
+              <div class="sub-item">
+                <span>2. 人工智能和创意活动 (12-18 岁)</span>
+                <button class="btn-learn" @click="startPlay('art_ai_2')">开始学习</button>
+              </div>
             </div>
           </CourseCard>
 
@@ -100,10 +131,22 @@
             :isGrayText="true"
           >
             <div class="sub-items">
-              <div class="sub-item">1. 什么是聊天机器人, 他们是如何工作的</div>
-              <div class="sub-item">2. 探索聊天机器人中的偏见</div>
-              <div class="sub-item">3. 创建你自己的机器人对话</div>
-              <div class="sub-item">4. 创建我们的课堂AI使用规范</div>
+              <div class="sub-item">
+                <span>1. 什么是聊天机器人, 他们是如何工作的</span>
+                <button class="btn-learn" @click="startPlay('app_chatbot_1')">开始学习</button>
+              </div>
+              <div class="sub-item">
+                <span>2. 探索聊天机器人中的偏见</span>
+                <button class="btn-learn" @click="startPlay('app_chatbot_2')">开始学习</button>
+              </div>
+              <div class="sub-item">
+                <span>3. 创建你自己的机器人对话</span>
+                <button class="btn-learn" @click="startPlay('app_chatbot_3')">开始学习</button>
+              </div>
+              <div class="sub-item">
+                <span>4. 创建我们的课堂AI使用规范</span>
+                <button class="btn-learn" @click="startPlay('app_chatbot_4')">开始学习</button>
+              </div>
             </div>
           </CourseCard>
 
@@ -115,10 +158,22 @@
             description="为年轻学习者学习 AI 和创造力的第一套课程！"
           >
             <div class="sub-items">
-              <div class="sub-item">1. 什么是创造力</div>
-              <div class="sub-item">2. 我们是否像AI一样思考</div>
-              <div class="sub-item">3. 创造性的使用AI时,编写清晰的说明</div>
-              <div class="sub-item">4. Yarn类项目</div>
+              <div class="sub-item">
+                <span>1. 什么是创造力</span>
+                <button class="btn-learn" @click="startPlay('app_creativity_1')">开始学习</button>
+              </div>
+              <div class="sub-item">
+                <span>2. 我们是否像AI一样思考</span>
+                <button class="btn-learn" @click="startPlay('app_creativity_2')">开始学习</button>
+              </div>
+              <div class="sub-item">
+                <span>3. 创造性的使用AI时,编写清晰的说明</span>
+                <button class="btn-learn" @click="startPlay('app_creativity_3')">开始学习</button>
+              </div>
+              <div class="sub-item">
+                <span>4. Yarn类项目</span>
+                <button class="btn-learn" @click="startPlay('app_creativity_4')">开始学习</button>
+              </div>
             </div>
           </CourseCard>
 
@@ -130,10 +185,22 @@
             description="ChatGPT 背后介绍关于如何在学校使用的讨论"
           >
             <div class="sub-items">
-              <div class="sub-item">1. 创作过程</div>
-              <div class="sub-item">2. ChatGPT 是如何工作的？</div>
-              <div class="sub-item">3. ChatGPT: 好或坏</div>
-              <div class="sub-item">4. 展示</div>
+              <div class="sub-item">
+                <span>1. 创作过程</span>
+                <button class="btn-learn" @click="startPlay('app_chatgpt_1')">开始学习</button>
+              </div>
+              <div class="sub-item">
+                <span>2. ChatGPT 是如何工作的？</span>
+                <button class="btn-learn" @click="startPlay('app_chatgpt_2')">开始学习</button>
+              </div>
+              <div class="sub-item">
+                <span>3. ChatGPT: 好或坏</span>
+                <button class="btn-learn" @click="startPlay('app_chatgpt_3')">开始学习</button>
+              </div>
+              <div class="sub-item">
+                <span>4. 展示</span>
+                <button class="btn-learn" @click="startPlay('app_chatgpt_4')">开始学习</button>
+              </div>
             </div>
           </CourseCard>
 
@@ -243,13 +310,30 @@
   </div>
 </template>
 
-<script>
+<script setup>
+// filepath: /d:/code_repository_2/DayOfAI/day-of-ai-page/src/views/Home.vue
+import { useRoute, useRouter } from 'vue-router'
 import CourseCard from '../components/CourseCard.vue'
 
-export default {
-  name: 'Home',
-  components: {
-    CourseCard
+// 路由对象
+const route = useRoute()
+const router = useRouter()
+
+// 开始学习
+const startPlay = (id) => {
+  console.log('开始学习:', id)
+  try {
+    router.push({
+      path: '/CoursePlay',
+      query: {
+        courseId: id,
+        chapterId: id
+      }
+    }).catch(err => {
+      console.error('路由跳转失败:', err)
+    })
+  } catch (error) {
+    console.error('跳转异常:', error)
   }
 }
 </script>
@@ -308,11 +392,35 @@ h2 {
   margin-top: 1rem;
 }
 
+/* 修改现有的 .sub-item 样式 */
 .sub-item {
   padding: 0.75rem;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 4px;
   font-size: 0.875rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Remove these styles */
+.btn-learn {
+  margin: 5px 5px 0 0;
+  float: right;
+  right: -100px;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  border: 0px;
+  outline: none;
+  color: #fff;
+  background: #388fff;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.btn-learn:hover {
+  background: #1565C0;
 }
 
 .ai-basics {

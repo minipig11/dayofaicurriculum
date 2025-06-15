@@ -42,6 +42,10 @@ export default {
   methods: {
     toggleDrawer() {
       this.isOpen = !this.isOpen
+    },
+    startPlay(id) {
+      console.log('开始学习课程:', id)
+      // 这里可以添加跳转或其他逻辑
     }
   }
 }
@@ -122,5 +126,30 @@ h3 {
 
 h3, .meta, .description, .sub-items, .sub-item {
   color: inherit;
+}
+
+.btn-learn {
+  margin: 5px 5px 0 0;
+  float: right;
+  right: -100px;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  border: 0px;
+  outline: none;
+  color: #fff;
+  background: #388fff;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.btn-learn:hover {
+  background: #1565C0;
+}
+
+.sub-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 </style>
