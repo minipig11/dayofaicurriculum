@@ -148,8 +148,8 @@ onBeforeMount(()=>{
 //章节 和 课时的数据
 let bizCourseChapters = ref([]);
 //课程播放
-const playCourse = ( params  )=>{
-    options.src = "/3.mp4" 
+const playCourse = ( params )=>{
+    options.src = "https://liulantupian.sicilyhuang.top/video/" + params.courseId +".mp4" 
 }
 
 //开始播放
