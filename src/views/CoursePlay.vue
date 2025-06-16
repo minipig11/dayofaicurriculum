@@ -4,7 +4,7 @@
 			<el-icon><ArrowLeftBold /></el-icon>
 		</div>
 		<div class='play'>
-			<div class='play-left'>
+			<!--div class='play-left'-->
 				
 				 <vue3VideoPlay
                 v-bind="options"
@@ -13,9 +13,9 @@
                 @ended='onEnded'
                 />
 
-			</div>
-			<div class='play-right'>
-				<!-- <el-tabs tab-position="right">
+			<!--/div -->
+			<!--<div class='play-right'>
+				 <el-tabs tab-position="right">
 	          <el-tab-pane>
               <template #label>
                 <div class="tabpanel-title">
@@ -89,8 +89,8 @@
               </template>
 	            <el-empty description="无笔记" />
 	          </el-tab-pane>
-		      </el-tabs> -->
-			</div>
+		      </el-tabs>
+			</div> -->
 		</div>
 	</div>
 </template>
