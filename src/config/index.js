@@ -1,0 +1,1 @@
+export const OSS_BASE_URL = 'https://dayofaicurriculum.oss-cn-shenzhen.aliyuncs.com/'; 

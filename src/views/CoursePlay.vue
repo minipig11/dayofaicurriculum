@@ -97,6 +97,7 @@
 <script setup>
 import vue3VideoPlay from 'vue3-video-play'
 import '@/assets/styles/video-play.css'
+import { OSS_BASE_URL } from '@/config/index.js' // 导入公共配置的URL
 
 //视频播放插件
 const options = reactive({
@@ -149,7 +150,8 @@ onBeforeMount(()=>{
 let bizCourseChapters = ref([]);
 //课程播放
 const playCourse = ( params )=>{
-    options.src = "https://liulantupian.sicilyhuang.top/video/" + params.courseId +".mp4" 
+    // 使用公共配置的URL前缀
+    options.src = OSS_BASE_URL + params.courseId + "/" + params.courseId + ".mp4"
 }
 
 //开始播放

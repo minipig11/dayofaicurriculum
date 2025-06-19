@@ -11,6 +11,10 @@ const routes = [
     path: "/CoursePlay",
     name: "CoursePlay",
     component: CoursePlay
+  },{
+    path: "/CourseWare",
+    name: "CourseWare",
+    component: () => import('../views/CourseWare.vue')
   }
   // {
   //   path: '/international',
