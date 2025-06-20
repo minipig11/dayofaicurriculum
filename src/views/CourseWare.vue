@@ -40,17 +40,22 @@
           </div>
         </div>
       </section>
+      <!-- 新增返回按钮容器 -->
+      <div class="back-button-container">
+        <button class="btn-back" @click="goBack">返回上一级</button>
+      </div>
     </main>
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 import { Reading, Monitor, Management } from '@element-plus/icons-vue';
 import { OSS_BASE_URL } from '@/config/index.js' // 导入公共配置的URL
 
 const route = useRoute();
+const router = useRouter();
 const courseId = ref(route.query.courseId || '');
 const courseTitle = ref('课程资料');
 const courseDescription = ref('这里将展示与课程相关的资料，包括教师指南、幻灯片和学生资源。');
@@ -124,43 +129,43 @@ onMounted(() => {
     studentResourcesDocuments.value = [
     ];
     // 更多文档...
-  } else if (courseId.value === 'app_creativity_1') {
+  } else if (courseId.value === 'app_chatbot') {
     courseTitle.value = '什么是AI？';
     courseDescription.value = '新：低年级和高年级活动！介绍 AI 是什么及其工作原理';
     teacherGuideDocuments.value = [
-      { name: '教师指南文档1', url: url+'_Upper Grades_ Educator Guide - AI and the Creative Arts.docx' }
+      
     ];
     teacherSlidesDocuments.value = [
-      { name: '幻灯片文档1', url: url+'_Upper Grades_ Slide Deck - AI and the Creative Arts.pptx' }
+      
     ];
     studentResourcesDocuments.value = [
     ];
     // 更多文档...
-  } else if (courseId.value === 'app_creativity_1') {
+  } else if (courseId.value === '`app_chatgpt') {
     courseTitle.value = '什么是AI？';
     courseDescription.value = '新：低年级和高年级活动！介绍 AI 是什么及其工作原理';
     teacherGuideDocuments.value = [
-      { name: '教师指南文档1', url: url+'Using AI for Creativity Teacher Guides.docx' }
+      { name: '教师指南文档1', url: url+'ChatGPT in Schools _ Educator Guide.docx' }
     ];
     teacherSlidesDocuments.value = [
-      { name: '幻灯片文档1', url: url+'Lesson 1：What is Creativity-Slides.pptx' }
+      { name: '幻灯片文档1', url: url+'ChatGPT in Schools _ Slide Show.pptx' }
     ];
     studentResourcesDocuments.value = [
     ];
     // 更多文档...
-  } else if (courseId.value === 'app_creativity_2') {
+  } else if (courseId.value === 'social_media_ai') {
     courseTitle.value = '什么是AI？';
     courseDescription.value = '新：低年级和高年级活动！介绍 AI 是什么及其工作原理';
     teacherGuideDocuments.value = [
-      { name: '教师指南文档1', url: url+'Using AI for Creativity Teacher Guides.docx' }
+      { name: '教师指南文档1', url: url+'Understanding AI in Social Media _ Educator Guide.docx' }
     ];
     teacherSlidesDocuments.value = [
-      { name: '幻灯片文档1', url: url+'Lesson 2：Using AI for Creativity-Slides.pptx' }
+      { name: '幻灯片文档1', url: url+'Understanding AI in Social Media _ Slide Show.pptx' }
     ];
     studentResourcesDocuments.value = [
     ];
     // 更多文档...
-  } else if (courseId.value === 'app_creativity_3') {
+  } else if (courseId.value === 'advanced_data_activism') {
     courseTitle.value = '什么是AI？';
     courseDescription.value = '新：低年级和高年级活动！介绍 AI 是什么及其工作原理';
     teacherGuideDocuments.value = [
@@ -172,7 +177,7 @@ onMounted(() => {
     studentResourcesDocuments.value = [
     ];
     // 更多文档...
-  } else if (courseId.value === 'app_creativity_4') {
+  } else if (courseId.value === 'climate_story') {
     courseTitle.value = '什么是AI？';
     courseDescription.value = '新：低年级和高年级活动！介绍 AI 是什么及其工作原理';
     teacherGuideDocuments.value = [
@@ -195,6 +200,11 @@ const openDocument = (url) => {
   } else {
     console.warn('文档 URL 未提供。');
   }
+};
+
+// 新增返回上一级的方法
+const goBack = () => {
+  router.back();
 };
 </script>
 
@@ -313,5 +323,31 @@ h2 {
   margin: 0 auto 1.5rem auto;
   font-size: 3rem;
   color: #2196F3;
+}
+
+.back-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem; /* 根据需要调整与上方内容的间距 */
+  margin-bottom: 2rem;
+}
+
+.btn-back {
+  width: 120px; /* 按钮宽度 */
+  height: 40px; /* 按钮高度 */
+  line-height: 40px;
+  border: 0px;
+  outline: none;
+  color: #fff;
+  background: #388fff; /* 蓝色 */
+  border-radius: 12px; /* 圆角 */
+  cursor: pointer;
+  font-size: 1rem; /* 字体大小 */
+  font-weight: bold; /* 字体加粗 */
+  transition: background 0.3s ease; /* 过渡效果 */
+}
+
+.btn-back:hover {
+  background: #1565C0; /* 鼠标悬停时的深蓝色 */
 }
 </style> 

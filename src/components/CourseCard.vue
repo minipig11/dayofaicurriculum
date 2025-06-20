@@ -5,12 +5,17 @@
     :data-type="type"
   >
     <div class="card-header" @click="toggleDrawer">
-      <h3>{{ title }}</h3>
-      <div class="meta">
-        <span class="level">{{ level }}</span>
-        <span class="age-range">{{ ageRange }}</span>
+      <div class="title-and-meta-group">
+        <h3>{{ title }}</h3>
+        <div class="meta">
+          <span class="level">{{ level }}</span>
+          <span class="age-range">{{ ageRange }}</span>
+        </div>
       </div>
-      <p class="description">{{ description }}</p>
+      <div class="description-row">
+        <p class="description">{{ description }}</p>
+        <button v-if="courseWareId" class="btn-course-ware-card" @click.stop="$emit('viewCourseWare', courseWareId)">课程资料</button>
+      </div>
       <span class="arrow" :class="{ 'is-open': isOpen }">▼</span>
     </div>
     <div class="drawer" :class="{ 'is-open': isOpen }">
@@ -32,8 +37,10 @@ export default {
       type: String,
       default: ''
     },
-    isGrayText: { type: Boolean, default: false }
+    isGrayText: { type: Boolean, default: false },
+    courseWareId: { type: String, default: '' }
   },
+  emits: ['viewCourseWare'],
   data() {
     return {
       isOpen: false
@@ -74,11 +81,12 @@ export default {
 
 h3 {
   font-size: 1.25rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
+  margin-right: 1rem;
 }
 
 .meta {
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 
 .level, .age-range {
@@ -93,6 +101,38 @@ h3 {
   font-size: 0.875rem;
   line-height: 1.5;
   margin-bottom: 1rem;
+}
+
+.description-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+  flex-grow: 1;
+  padding-right: 10px;
+}
+
+.btn-course-ware-card {
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  border: 0px;
+  outline: none;
+  color: #fff;
+  background: #4CAF50;
+  border-radius: 12px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.btn-course-ware-card:hover {
+  background: #2E7D32;
 }
 
 .drawer {
@@ -116,12 +156,13 @@ h3 {
 .arrow {
   position: absolute;
   right: 0;
-  top: 1rem;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
   transition: transform 0.3s ease;
 }
 
 .arrow.is-open {
-  transform: rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
 }
 
 h3, .meta, .description, .sub-items, .sub-item {
@@ -151,5 +192,11 @@ h3, .meta, .description, .sub-items, .sub-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.title-and-meta-group {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
 }
 </style>

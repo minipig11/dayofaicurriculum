@@ -6,13 +6,12 @@
         <h2>AI 素养基础</h2>
         <p class="section-desc">适合初级和中学生学习的基础 AI 系列课程，以简单且针对性强的项目为切入点，帮你零基础入门人工智能时代。</p>
         <div class="course-grid">
-          <CourseCard title="面向小学低年级的 AI" type="basic" level="初级" ageRange="(5-7 岁)" description="2025 年更新！面向年轻学习者的一系列介绍活动">
+          <CourseCard title="面向小学低年级的 AI" type="basic" level="初级" ageRange="(5-7 岁)" description="2025 年更新！面向年轻学习者的一系列介绍活动" courseWareId="ai_basic" @viewCourseWare="viewCourseWare">
             <div class="sub-items">
               <div class="sub-item">
                 <span>1. 什么是AI？</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('ai_basic_1')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('ai_basic_1')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('ai_basic', 'ai_basic_1')">开始学习</button>
                 </div>
               </div>
             </div>
@@ -23,27 +22,25 @@
             level="初级"
             ageRange="(8-18 岁)"
             description="新：低年级和高年级活动！介绍 AI 是什么及其工作原理"
+            courseWareId="basic_what_is_ai" @viewCourseWare="viewCourseWare"
           >
             <div class="sub-items">
               <div class="sub-item">
                 <span>1. 什么是AI？</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('basic_what_is_ai_1')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('basic_what_is_ai_1')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('basic_what_is_ai', 'basic_what_is_ai_1')">开始学习</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>2. 机器如何学习（简介）</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('basic_what_is_ai_2')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('basic_what_is_ai_2')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('basic_what_is_ai', 'basic_what_is_ai_1')">开始学习</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>3. 什么是算法</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('basic_what_is_ai_3')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('basic_what_is_ai_3')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('basic_what_is_ai', 'basic_what_is_ai_1')">开始学习</button>
                 </div>
               </div>
             </div>
@@ -54,20 +51,19 @@
             level="初级"
             ageRange="(8-18 岁)"
             description="更新于 2024 年 12月！学生将发现生成式AI 如何创新内容，并掌究其技术及其道德影响"
+            courseWareId="basic_machine_learning" @viewCourseWare="viewCourseWare"
           >
             <div class="sub-items">
               <div class="sub-item">
                 <span>1. 可教机器</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('basic_machine_learning_1')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('basic_machine_learning_1')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('basic_machine_learning', 'basic_machine_learning_1')">开始学习</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>2. AI中的偏见</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('basic_machine_learning_2')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('basic_machine_learning_2')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('basic_machine_learning', 'basic_machine_learning_1')">开始学习</button>
                 </div>
               </div>
             </div>
@@ -78,27 +74,25 @@
             level="初级"
             ageRange="(8-18 岁)"
             description="更新于 2024 年 12月！学生将发现生成式AI 如何创新内容，并掌究其技术及其道德影响"
+            courseWareId="basic_gen_ai" @viewCourseWare="viewCourseWare"
           >
             <div class="sub-items">
               <div class="sub-item">
                 <span>1. 什么是生成式 AI？</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('basic_gen_ai_1')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('basic_gen_ai_1')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('basic_gen_ai', 'basic_gen_ai_1')">开始学习</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>2. 使用AI生成图像</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('basic_gen_ai_2')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('basic_gen_ai_2')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('basic_gen_ai', 'basic_gen_ai_1')">开始学习</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>3. 深度伪造</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('basic_gen_ai_3')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('basic_gen_ai_3')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('basic_gen_ai', 'basic_gen_ai_1')">开始学习</button>
                 </div>
               </div>
             </div>
@@ -110,20 +104,19 @@
             ageRange="(10-18 岁)"
             description="学办 AI 道德伦理选修课 AI 作为进阶的教材！（这些活动可以按任何顺序教授）"
             :isGrayText="true"
+            courseWareId="basic_ethics" @viewCourseWare="viewCourseWare"
           >
             <div class="sub-items">
               <div class="sub-item">
                 <span>1. AI 伦理辩论材料</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('basic_ethics_1')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('basic_ethics_1')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('basic_ethics', 'basic_ethics_1')">开始学习</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>2. 合乎道德的使用AI探索</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('basic_ethics_2')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('basic_ethics_2')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('basic_ethics', 'basic_ethics_2')">开始学习</button>
                 </div>
               </div>
             </div>
@@ -142,20 +135,19 @@
             level="中级"
             ageRange="(8 岁及以上)"
             description="*2025 年新版！"
+            courseWareId="art_ai" @viewCourseWare="viewCourseWare"
           >
             <div class="sub-items">
               <div class="sub-item" style="color: #666;">
                 <span>1. 人工智能和创意艺术 (5-11 岁)</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('art_ai_1')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('art_ai_1')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('art_ai', 'art_ai_1')">开始学习</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>2. 人工智能和创意活动 (12-18 岁)</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('art_ai_2')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('art_ai_2')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('art_ai', 'art_ai_1')">开始学习</button>
                 </div>
               </div>
             </div>
@@ -168,34 +160,31 @@
             ageRange="(12 岁及以上)"
             description="*2025 年新版！"
             :isGrayText="true"
+            courseWareId="app_chatbot" @viewCourseWare="viewCourseWare"
           >
             <div class="sub-items">
               <div class="sub-item">
                 <span>1. 什么是聊天机器人, 他们是如何工作的</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('app_chatbot_1')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('app_chatbot_1')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('app_chatbot', 'app_chatbot_1')">开始学习</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>2. 探索聊天机器人中的偏见</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('app_chatbot_2')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('app_chatbot_2')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('app_chatbot', 'app_chatbot_2')">开始学习</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>3. 创建你自己的机器人对话</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('app_chatbot_3')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('app_chatbot_3')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('app_chatbot', 'app_chatbot_3')">开始学习</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>4. 创建我们的课堂AI使用规范</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('app_chatbot_4')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('app_chatbot_4')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('app_chatbot', 'app_chatbot_4')">开始学习</button>
                 </div>
               </div>
             </div>
@@ -207,34 +196,31 @@
             level="中级"
             ageRange="(8-10 岁)"
             description="为年轻学习者学习 AI 和创造力的第一套课程！"
+            courseWareId="app_creativity" @viewCourseWare="viewCourseWare"
           >
             <div class="sub-items">
               <div class="sub-item">
                 <span>1. 什么是创造力</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('app_creativity_1')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('app_creativity_1')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('app_creativity', 'Using AI for Creativity')">开始学习</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>2. 我们是否像AI一样思考</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('app_creativity_2')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('app_creativity_2')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('app_creativity', 'What is Creativity-Slides')">开始学习</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>3. 创造性的使用AI时,编写清晰的说明</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('app_creativity_3')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('app_creativity_3')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('app_creativity', 'Do We Think Like AI')">开始学习</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>4. Yarn类项目</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('app_creativity_4')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('app_creativity_4')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('app_creativity', 'Yarn Class Project')">开始学习</button>
                 </div>
               </div>
             </div>
@@ -246,34 +232,31 @@
             level="中级"
             ageRange="(8-18 岁)"
             description="ChatGPT 背后介绍关于如何在学校使用的讨论"
+            courseWareId="app_chatgpt" @viewCourseWare="viewCourseWare"
           >
             <div class="sub-items">
               <div class="sub-item">
                 <span>1. 创作过程</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('app_chatgpt_1')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('app_chatgpt_1')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('app_chatgpt', 'app_chatgpt_1')">开始学习</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>2. ChatGPT 是如何工作的？</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('app_chatgpt_2')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('app_chatgpt_2')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('app_chatgpt', 'app_chatgpt_1')">开始学习</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>3. ChatGPT: 好或坏</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('app_chatgpt_3')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('app_chatgpt_3')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('app_chatgpt', 'app_chatgpt_1')">开始学习</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>4. 展示</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('app_chatgpt_4')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('app_chatgpt_4')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('app_chatgpt', 'app_chatgpt_1')">开始学习</button>
                 </div>
               </div>
             </div>
@@ -286,55 +269,49 @@
             ageRange="(8-18 岁)"
             description="一系列公民课程，探讨人工智能如何影响社会权利的影响"
             :isGrayText="true"
+            courseWareId="rights_ai" @viewCourseWare="viewCourseWare"
           >
             <div class="sub-items">
               <div class="sub-item">
                 <span>1. 人权和特权</span>
                 <div class="btn-group">
                   <button class="btn-learn" @click="startPlay('rights_ai', '1')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('rights_ai')">课程资料</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>2. 权力如何随着时间的推移而演变</span>
                 <div class="btn-group">
                   <button class="btn-learn" @click="startPlay('rights_ai', '2')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('rights_ai')">课程资料</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>3. 算法和判别</span>
                 <div class="btn-group">
                   <button class="btn-learn" @click="startPlay('rights_ai', '3')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('rights_ai')">课程资料</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>4. 技术和隐私</span>
                 <div class="btn-group">
                   <button class="btn-learn" @click="startPlay('rights_ai', '4')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('rights_ai')">课程资料</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>5. 广告和透明度</span>
                 <div class="btn-group">
                   <button class="btn-learn" @click="startPlay('rights_ai', '5')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('rights_ai')">课程资料</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>6. 设计安全系统</span>
                 <div class="btn-group">
                   <button class="btn-learn" @click="startPlay('rights_ai', '6')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('rights_ai')">课程资料</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>7. 权力和人工智能的使用</span>
                 <div class="btn-group">
                   <button class="btn-learn" @click="startPlay('rights_ai', '7')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('rights_ai')">课程资料</button>
                 </div>
               </div>
             </div>
@@ -347,97 +324,85 @@
             ageRange="(10-18 岁)"
             description="关于在社交媒体中使用人工智能的新发现及其影响的一系列研究实践训"
             :isGrayText="true"
+            courseWareId="school_ai_tools" @viewCourseWare="viewCourseWare"
           >
             <div class="sub-items">
               <div class="sub-item">
                 <span>1. 现行校规</span>
                 <div class="btn-group">
                   <button class="btn-learn" @click="startPlay('school_ai_tools', '1')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('school_ai_tools')">课程资料</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>2. 创作过程</span>
                 <div class="btn-group">
                   <button class="btn-learn" @click="startPlay('school_ai_tools', '2')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('school_ai_tools')">课程资料</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>3. 聊天机器人和大语言模型</span>
                 <div class="btn-group">
                   <button class="btn-learn" @click="startPlay('school_ai_tools', '3')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('school_ai_tools')">课程资料</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>4. 我们今天生活中的人工智能</span>
                 <div class="btn-group">
                   <button class="btn-learn" @click="startPlay('school_ai_tools', '4')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('school_ai_tools')">课程资料</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>5. 使用AI的道德考虑</span>
                 <div class="btn-group">
                   <button class="btn-learn" @click="startPlay('school_ai_tools', '5')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('school_ai_tools')">课程资料</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>6. 人工智能在学校</span>
                 <div class="btn-group">
                   <button class="btn-learn" @click="startPlay('school_ai_tools', '6')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('school_ai_tools')">课程资料</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>7. 立法和法案:美国法律是如何制定的</span>
                 <div class="btn-group">
                   <button class="btn-learn" @click="startPlay('school_ai_tools', '7')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('school_ai_tools')">课程资料</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>8. 编写自己的AI法案</span>
                 <div class="btn-group">
                   <button class="btn-learn" @click="startPlay('school_ai_tools', '8')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('school_ai_tools')">课程资料</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>9. 建立共识</span>
                 <div class="btn-group">
                   <button class="btn-learn" @click="startPlay('school_ai_tools', '9')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('school_ai_tools')">课程资料</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>10. AI法案修正案</span>
                 <div class="btn-group">
                   <button class="btn-learn" @click="startPlay('school_ai_tools', '10')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('school_ai_tools')">课程资料</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>11. AI法案提案准备</span>
                 <div class="btn-group">
                   <button class="btn-learn" @click="startPlay('school_ai_tools', '11')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('school_ai_tools')">课程资料</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>12. 出示您的AI账单</span>
                 <div class="btn-group">
                   <button class="btn-learn" @click="startPlay('school_ai_tools', '12')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('school_ai_tools')">课程资料</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>13. (可选)共享您的AI账单)</span>
                 <div class="btn-group">
                   <button class="btn-learn" @click="startPlay('school_ai_tools', '13')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('school_ai_tools')">课程资料</button>
                 </div>
               </div>
             </div>
@@ -449,27 +414,25 @@
             level="中级"
             ageRange="(10-18 岁)"
             description="关于在社交媒体中使用人工智能的新发现及其影响的一系列研究实践"
+            courseWareId="social_media_ai" @viewCourseWare="viewCourseWare"
           >
             <div class="sub-items">
               <div class="sub-item">
-                <span>1. 数据聚类与过滤气泡</span>
+                <span>1. 推荐系统</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('social_media_ai', '1')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('social_media_ai')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('social_media_ai', 'recommand system')">开始学习</button>
                 </div>
               </div>
               <div class="sub-item">
-                <span>2. 错误信息</span>
+                <span>2. 是真的吗？</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('social_media_ai', '2')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('social_media_ai')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('social_media_ai', 'It is true')">开始学习</button>
                 </div>
               </div>
               <div class="sub-item">
-                <span>3. 道德矩阵</span>
+                <span>3. 社交媒体网站</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('social_media_ai', '3')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('social_media_ai')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('social_media_ai', 'Socal Media')">开始学习</button>
                 </div>
               </div>
             </div>
@@ -488,62 +451,55 @@
             level="高级"
             ageRange="(14-18 岁)"
             description="适合数据科学思考 - 使用编码 Python 进行数据"
+            courseWareId="advanced_data_activism" @viewCourseWare="viewCourseWare"
           >
             <div class="sub-items">
               <div class="sub-item">
                 <span>1. 数据行动主义介绍</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('advanced_data_activism_1')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('advanced_data_activism_1')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('advanced_data_activism', 'advanced_data_activism_1')">开始学习</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>2. Python 简介 Part1</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('advanced_python_intro_1')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('advanced_python_intro_1')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('advanced_python_intro', 'advanced_python_intro_1')">开始学习</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>3. Python 简介 Part2</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('advanced_python_intro_2')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('advanced_python_intro_2')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('advanced_python_intro', 'advanced_python_intro_2')">开始学习</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>4. 雏菊模型</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('advanced_daisy_model_1')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('advanced_daisy_model_1')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('advanced_daisy_model', 'advanced_daisy_model_1')">开始学习</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>5. Google表格中的数据</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('advanced_google_sheets_1')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('advanced_google_sheets_1')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('advanced_google_sheets', 'advanced_google_sheets_1')">开始学习</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>6. 可视化数据</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('advanced_data_visualization_1')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('advanced_data_visualization_1')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('advanced_data_visualization', 'advanced_data_visualization_1')">开始学习</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>7. 数据图纸</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('advanced_data_drawing_1')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('advanced_data_drawing_1')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('advanced_data_drawing', 'advanced_data_drawing_1')">开始学习</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>8. 数据的力量和数据行动主义</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('advanced_data_power_1')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('advanced_data_power_1')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('advanced_data_power', 'advanced_data_power_1')">开始学习</button>
                 </div>
               </div>
             </div>
@@ -555,48 +511,43 @@
             level="高级"
             ageRange="(8-18 岁)"
             description=""
+            courseWareId="climate_story" @viewCourseWare="viewCourseWare"
           >
             <div class="sub-items">
               <div class="sub-item">
                 <span>1. 数据即叙述</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('climate_story_1')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('climate_story_1')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('climate_story', 'climate_story_1')">开始学习</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>2. 使用python探索数据</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('climate_story_2')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('climate_story_2')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('climate_story', 'climate_story_2')">开始学习</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>3. 使用python可视化数据</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('climate_story_3')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('climate_story_3')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('climate_story', 'climate_story_3')">开始学习</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>4. 使用机器学习预测趋势</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('climate_story_4')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('climate_story_4')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('climate_story', 'climate_story_4')">开始学习</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>5. 独立数据分析项目</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('climate_story_5')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('climate_story_5')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('climate_story', 'climate_story_5')">开始学习</button>
                 </div>
               </div>
               <div class="sub-item">
                 <span>6. 讲述气候故事</span>
                 <div class="btn-group">
-                  <button class="btn-learn" @click="startPlay('climate_story_6')">开始学习</button>
-                  <button class="btn-course-ware" @click="viewCourseWare('climate_story_6')">课程资料</button>
+                  <button class="btn-learn" @click="startPlay('climate_story', 'climate_story_6')">开始学习</button>
                 </div>
               </div>
             </div>
@@ -687,6 +638,10 @@ h2 {
 }
 
 /* 添加课程卡片背景颜色样式 */
+:deep(.course-card) {
+  position: relative;
+}
+
 :deep(.course-card[data-type="basic"]) {
   background-color: #E3F2FD; /* 浅蓝色背景用于基础课程 */
 }
@@ -722,43 +677,22 @@ h2 {
   gap: 10px; /* 控制按钮之间的间距 */
 }
 
-/* Remove these styles */
 .btn-learn {
-  margin: 0; /* 移除外边距，由父容器的 gap 控制 */
-  /* float: right; */
-  /* right: -100px; */
-  width: 80px;
-  height: 30px;
-  line-height: 30px;
+  margin: 0;
+  width: 100px; /* 调整宽度 */
+  height: 35px; /* 调整高度 */
+  line-height: 35px; /* 调整行高以垂直居中文本 */
   border: 0px;
   outline: none;
   color: #fff;
   background: #388fff;
   border-radius: 12px;
   cursor: pointer;
+  font-size: 0.95rem; /* 调整字体大小 */
 }
 
 .btn-learn:hover {
   background: #1565C0;
-}
-
-.btn-course-ware {
-  margin: 0; /* 移除外边距，由父容器的 gap 控制 */
-  /* float: right; */
-  /* right: -100px; */
-  width: 80px;
-  height: 30px;
-  line-height: 30px;
-  border: 0px;
-  outline: none;
-  color: #fff;
-  background: #4CAF50; /* 绿色 */
-  border-radius: 12px;
-  cursor: pointer;
-}
-
-.btn-course-ware:hover {
-  background: #2E7D32; /* 深绿色 */
 }
 
 .ai-basics {

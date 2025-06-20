@@ -151,7 +151,7 @@ let bizCourseChapters = ref([]);
 //课程播放
 const playCourse = ( params )=>{
     // 使用公共配置的URL前缀
-    options.src = OSS_BASE_URL + params.courseId + "/" + params.courseId + ".mp4"
+    options.src = OSS_BASE_URL + params.courseId + "/" + params.chapterId + ".mp4"
 }
 
 //开始播放
